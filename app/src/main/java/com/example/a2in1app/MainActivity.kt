@@ -9,11 +9,28 @@ import android.view.MenuItem
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.guessthephrase.GuessThePhrase
 import com.example.numbersgameapp.NumbersGame
+import kotlinx.android.synthetic.main.activity_guess_the_phrase.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
+
+
+        bt_number.setOnClickListener{
+
+            startGame(NumbersGame())
+        }
+
+        bt_phase.setOnClickListener{
+
+            startGame(GuessThePhrase())
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
